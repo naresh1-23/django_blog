@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Input </title>
+    <style>
+        .topic{
+            text-align: center;
+            margin-bottom: 5%;
+            font-size: 50px;
+            background-color: #f1f1f1;
+        }
+        .input{
+            background-color: #f1f1f1;
+            padding: 50px;
+        }
+        label{
+            font-size: 30px;
+        }
+        a{
+            float: right;
+            font-size: 25px;
+            color: red;
+            text-decoration: none;
+        }
+        .detail{
+            height: 100px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="topic">
+        <h1>Enter the detail</h1>
+    </div>
+    <div class="input">
+        <form action="" method="post">
+            {% csrf_token %}
+            <label>Enter the topic</label><br>
+            <input name="title" class="title" type="text">
+            <br><br>
+            <label>Enter the detail</label><br>
+            <input class="detail" name="detail" type="text" size="100px">
+            <br><br>
+            <button type="submit" name="save">save</button>
+        </form>
+        <a href="/" class="link">Home page</a>
+    </div>
+    
+</body>
+</html>
